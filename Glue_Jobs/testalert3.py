@@ -11,7 +11,7 @@ spark = glueContext.spark_session
 
 print("Hello from Terraform")
 # Just print something
-print("Glue Job2 Started")
+print("Glue Job2 Started.")
 print("Hello from Glue 2!")
 
 # Uncomment to simulate failure
