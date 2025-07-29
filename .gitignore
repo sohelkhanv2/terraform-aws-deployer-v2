@@ -1,0 +1,10 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+
+# Local backup/test folders (custom)
+lambda_bckptf/
+step_functionstf/
