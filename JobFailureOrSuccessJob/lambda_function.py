@@ -18,6 +18,8 @@ def lambda_handler(event, context):
         message = json.dumps(event.get("error", {}))
         print("prints the Message:", message)
         print("testing terraform")
+        print("testing terraform with update the lambda function")
+        print("inside the lambda function job failure or success job")
 
     elif alert_type == "SUCCESS":
         subject = "All Glue Jobs Completed Successfully"
