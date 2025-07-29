@@ -20,6 +20,7 @@ def lambda_handler(event, context):
         print("testing terraform")
         print("testing terraform with update the lambda function")
         print("inside the lambda function job failure or success job")
+        print("inside the lambda function job failure or success job just to test the terraform")
 
     elif alert_type == "SUCCESS":
         subject = "All Glue Jobs Completed Successfully"
