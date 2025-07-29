@@ -19,6 +19,20 @@ jobs:
         with:
           terraform_version: 1.6.6
 
+      # 👇 STEP: Zip JobFailureOrSuccessAlertsLambda
+      - name: Zip JobFailureOrSuccessAlertsLambda
+        run: |
+          cd JobFailureOrSuccessJob
+          zip -r JobFailureOrSuccessAlertsLambda.zip . -x "*.zip"
+          cd ..
+
+      # 👇 STEP: Zip test-lambda-trigger
+      - name: Zip test-lambda-trigger
+        run: |
+          cd Test-Trigger-Lambda
+          zip -r test-lambda-trigger.zip . -x "*.zip"
+          cd ..
+
       - name: Terraform Init
         run: terraform init
         env:
