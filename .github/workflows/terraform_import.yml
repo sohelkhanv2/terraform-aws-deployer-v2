@@ -32,6 +32,16 @@ jobs:
           echo "Checking and importing test-lambda-trigger..."
           terraform state list | grep aws_lambda_function.test-lambda-trigger || terraform import aws_lambda_function.test-lambda-trigger test-lambda-trigger
 
+          echo "Checking and importing Glue Job: terraform-job1..."
+          terraform state list | grep aws_glue_job.terraform_job1 || terraform import aws_glue_job.terraform_job1 terraform-job1
+
+          echo "Checking and importing Glue Job: terraform-job2..."
+          terraform state list | grep aws_glue_job.terraform_job2 || terraform import aws_glue_job.terraform_job2 terraform-job2
+
+          echo "Checking and importing Glue Job: testalert3..."
+          terraform state list | grep aws_glue_job.testalert3 || terraform import aws_glue_job.testalert3 testalert3
+
+
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

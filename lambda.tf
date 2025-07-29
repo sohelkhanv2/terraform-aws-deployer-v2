@@ -9,8 +9,8 @@ resource "aws_lambda_function" "JobFailureOrSuccessAlertsLambda" {
   memory_size   = 128
   timeout       = 3
   package_type  = "Zip"
-  filename      = "Lambda_Function/JobFailureOrSuccessAlertsLambda.zip"
-  source_code_hash = filebase64sha256("Lambda_Function/JobFailureOrSuccessAlertsLambda.zip")
+  filename      = "JobFailureOrSuccessJob/JobFailureOrSuccessAlertsLambda.zip"
+  source_code_hash = filebase64sha256("JobFailureOrSuccessJob/JobFailureOrSuccessAlertsLambda.zip")
 
   environment {
     variables = {
@@ -48,8 +48,8 @@ resource "aws_lambda_function" "test-lambda-trigger" {
   memory_size   = 128
   timeout       = 3
   package_type  = "Zip"
-  filename      = "${path.module}/Lambda_Function/test-lambda-trigger.zip"
-  source_code_hash = filebase64sha256("Lambda_Function/test-lambda-trigger.zip")
+  filename      = "${path.module}/Test-Trigger-Lambda/test-lambda-trigger.zip"
+  source_code_hash = filebase64sha256("Test-Trigger-Lambda/test-lambda-trigger.zip")
 
   ephemeral_storage {
     size = 512
