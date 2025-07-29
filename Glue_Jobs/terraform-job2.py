@@ -16,5 +16,6 @@ print("Hello from Glue 2!")
 # Uncomment to simulate failure
 # raise Exception("Simulated failure in glue-job-2")
 print("Glue Job 2 Completed Successfully")
-print("checking the update from terraform")  
+print("checking the update from terraform")
+print  
 print("Hello from Terraform") 
