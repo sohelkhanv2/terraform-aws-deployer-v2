@@ -17,5 +17,5 @@ print("Hello from Glue 2!")
 # raise Exception("Simulated failure in glue-job-2")
 print("Glue Job 2 Completed Successfully")
 print("checking the update from terraform")
-print  
-print("Hello from Terraform") 
+print("terraform job 2 completed successfully")
+print("Hello from Terraform")  
