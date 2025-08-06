@@ -88,7 +88,7 @@ resource "aws_glue_job" "terraform_job2" {
 
 resource "aws_glue_job" "Business-Logic" {
   name     = "Business-Logic"
-  role_arn = "placeholder-role" # temporary placeholder
+  role_arn = var.glue_job_role_arn
  
   command {
     name            = "glueetl"         # required
