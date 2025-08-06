@@ -41,6 +41,11 @@
             echo "Checking and importing Glue Job: testalert3..."
             terraform state list | grep aws_glue_job.testalert3 || terraform import aws_glue_job.testalert3 testalert3
 
+            echo "Checking and importing Glue Job: Business Logic..."
+            terraform state list | grep aws_glue_job.Business-Logic || terraform import aws_glue_job.Business-Logic Business-Logic
+
+        - name: Show Terraform State (for Glue Job)
+          run: terraform state show aws_glue_job.Business-Logic
 
           env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

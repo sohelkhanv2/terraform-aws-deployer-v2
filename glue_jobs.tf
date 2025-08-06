@@ -86,6 +86,16 @@ resource "aws_glue_job" "terraform_job2" {
   }
 }
 
+resource "aws_glue_job" "Business-Logic" {
+  name     = "Business-Logic"
+  role_arn = "placeholder-role" # temporary placeholder
+ 
+  command {
+    name            = "glueetl"         # required
+    script_location = "s3://dummy/path" # required
+    python_version  = "3"
+  }
+}
 
 
 # Upload the script to S3
